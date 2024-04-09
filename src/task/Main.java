@@ -15,7 +15,10 @@ public class Main {
             userList.get(i).setAge(intScan.nextInt());
         }
         userList.sort(Comparator.comparingInt(User::getAge));
-        System.out.println(userList);
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(userList.get(i).toString());
+        }
     }
 
 }
