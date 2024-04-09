@@ -4,15 +4,19 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        User person1 = new User(),person2 = new User(),person3 = new User(),person4 = new User(),person5 = new User();
-        List<User> userList = Arrays.asList(person1,person2,person3,person4,person5);
+        List<User> userList = new ArrayList<>();
         Scanner intScan = new Scanner(System.in), strScan = new Scanner(System.in);
+
+        String name;
+        int age;
 
         for (int i = 0; i < 5; i++) {
             System.out.println("Введите имя пользователя " + (i+1));
-            userList.get(i).setName(strScan.nextLine());
+            name = strScan.nextLine();
             System.out.println("Введите возраст пользователя " + (i+1));
-            userList.get(i).setAge(intScan.nextInt());
+            age = intScan.nextInt();
+
+            userList.add(new User(name,age));
         }
         userList.sort(Comparator.comparingInt(User::getAge));
 

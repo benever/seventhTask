@@ -5,11 +5,6 @@ public class User {
 
     private Integer age;
 
-    public User() {
-        this.name = "";
-        this.age = 0;
-    }
-
     public User(String name, Integer age) {
         this.name = name;
         this.age = age;
